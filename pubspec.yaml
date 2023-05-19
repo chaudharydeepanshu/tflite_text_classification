@@ -1,6 +1,6 @@
 name: tflite_text_classification
 description: A flutter plugin for doing text classification using tflite models.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/chaudharydeepanshu/tflite_text_classification
 repository: https://github.com/chaudharydeepanshu/tflite_text_classification
 issue_tracker: https://github.com/chaudharydeepanshu/tflite_text_classification/issues
