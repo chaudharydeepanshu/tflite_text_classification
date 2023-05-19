@@ -1,0 +1,57 @@
+group 'com.deepanshuchaudhary.tflite_text_classification'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.7.10'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 31
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        minSdkVersion 21
+    }
+}
+
+dependencies {
+    implementation 'org.tensorflow:tensorflow-lite-task-text:0.4.3'
+    implementation 'org.tensorflow:tensorflow-lite-gpu-delegate-plugin:0.4.3'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.12.0'
+
+    def activity_version = "1.6.1"
+    implementation "androidx.activity:activity-ktx:$activity_version"
+
+//    implementation files('C:\\dev\\src\\flutter\\bin\\cache\\artifacts\\engine\\android-x64\\flutter.jar')
+}
