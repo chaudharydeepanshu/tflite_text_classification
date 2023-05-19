@@ -44,3 +44,13 @@ ClassificationResult? result = await TfliteTextClassification().classifyText(
   ),
 );
 ```
+
+## For Example Code
+
+To run the example project, download this below model zips and extract them in the assets folder of the example project. I'm providing these sample models separately because of their size.
+
+[Sample Average Word Vec Model.zip](https://github.com/chaudharydeepanshu/tflite_text_classification/files/11517973/Sample.Average.Word.Vec.Model.zip)
+
+[Sample Mobilebert Model.zip](https://github.com/chaudharydeepanshu/tflite_text_classification/files/11517983/Sample.Mobilebert.Model.zip)
+
+The provided models does Hinglish(Common language in India) Text Emotion Classification and are generated using the Tensorflow Lite Model Maker but they are not very accurate and are only here for demonstration purposes. Replace provided model with your own models.
